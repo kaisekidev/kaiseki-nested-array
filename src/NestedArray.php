@@ -12,6 +12,7 @@ class NestedArray
 {
     /**
      * @param array<mixed> ...$arrays
+     *
      * @return array<mixed>
      */
     public function mergeDeep(array ...$arrays): array
@@ -21,15 +22,18 @@ class NestedArray
             foreach ($array as $key => $value) {
                 if (is_int($key)) {
                     $result[] = $value;
+
                     continue;
                 }
                 if (is_array($value) && array_key_exists($key, $result) && is_array($result[$key])) {
                     $result[$key] = $this->mergeDeep($result[$key], $value);
+
                     continue;
                 }
                 $result[$key] = $value;
             }
         }
+
         return $result;
     }
 }
