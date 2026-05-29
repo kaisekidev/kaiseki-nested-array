@@ -1,7 +1,7 @@
 {
   "name": "kaiseki/nested-array",
   "type": "library",
-  "description": "",
+  "description": "Recursively merge nested arrays (deep merge).",
   "license": "MIT",
   "homepage": "https://github.com/kaisekidev/kaiseki-nested-array",
   "authors": [
